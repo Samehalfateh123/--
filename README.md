@@ -859,6 +859,63 @@ class="whatsapp-float">
 
 </body>
 </html>
+<script>
+function changeLanguage() {
+
+const lang = document.getElementById("languageSwitcher").value;
+
+if(lang === "en") {
+
+document.documentElement.lang = "en";
+document.documentElement.dir = "ltr";
+
+document.getElementById("logoText").innerText = "Farhatna";
+
+document.getElementById("subtitleText").innerText =
+"Sudanese Wedding & Jirtig Dresses";
+
+document.getElementById("heroTitle").innerText =
+"Bridal Elegance Starts Here";
+
+document.getElementById("heroDescription").innerText =
+"Discover the latest wedding and Sudanese Jirtig dresses with luxurious designs.";
+
+} else {
+
+document.documentElement.lang = "ar";
+document.documentElement.dir = "rtl";
+
+document.getElementById("logoText").innerText = "فرحتنا";
+
+document.getElementById("subtitleText").innerText =
+"لفساتين الزفاف والجرتق السوداني";
+
+document.getElementById("heroTitle").innerText =
+"أناقة العروس تبدأ من هنا";
+
+document.getElementById("heroDescription").innerText =
+"اكتشفي أحدث موديلات فساتين الزفاف والجرتق السوداني بتصاميم ملكية وخامات فاخرة تمنحك إطلالة لا تُنسى";
+
+}
+
+localStorage.setItem("siteLanguage", lang);
+}
+
+window.onload = function() {
+
+const savedLanguage =
+localStorage.getItem("siteLanguage");
+
+if(savedLanguage){
+
+document.getElementById("languageSwitcher").value =
+savedLanguage;
+
+changeLanguage();
+}
+
+};
+</script>
 
 © 2026 فرحتنا لفساتين الزفاف والجرتق السوداني
  
